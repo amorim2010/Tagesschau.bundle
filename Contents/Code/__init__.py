@@ -27,7 +27,7 @@ def Start():
 @handler(VIDEO_PREFIX, 'Tagesschau')
 def VideoMainMenu():
   dir = MediaContainer(mediaType="video", viewGroup="Details")
-  for item in XML.ElementFromURL('http://www.tagesschau.de/export/video-podcast/tagesschau/', False, errors='ignore').xpath('//item'):
+  for item in XML.ElementFromURL('http://www.tagesschau.de/export/video-podcast/webl/tagesschau', False, errors='ignore').xpath('//item'):
     title       = item.find('title').text.strip()
     date        = item.find('pubDate').text.strip()
     description = item.find('description').text.strip()
