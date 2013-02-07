@@ -10,7 +10,7 @@ def Start():
 	VideoClipObject.thumb = R(ICON)
 
 ####################################################################################################
-@handler('/video/tagesschau', NAME, thumb=ICON, art=ART)
+@handler('/video/tagesschau', NAME, thumb=ICON, art=ART, allow_sync=True)
 def MainMenu():
 
 	oc = ObjectContainer()
