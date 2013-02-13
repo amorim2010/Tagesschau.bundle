@@ -21,7 +21,12 @@ def MainMenu():
 		summary = item.xpath('./description/text()')[0]
 		originally_available_at = Datetime.ParseDate(item.xpath('./pubDate/text()')[0])
 
-		oc.add(CreateVideoClipObject(url=url, title=title, summary=summary, originally_available_at=originally_available_at))
+		oc.add(CreateVideoClipObject(
+			url = url,
+			title = title,
+			summary = summary,
+			originally_available_at = originally_available_at
+		))
 
 	return oc
 
