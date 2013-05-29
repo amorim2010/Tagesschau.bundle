@@ -1,16 +1,12 @@
 NAME = 'Tagesschau'
-ART = 'art-default.jpg'
-ICON = 'icon-default.png'
 
 ####################################################################################################
 def Start():
 
-	ObjectContainer.art = R(ART)
-	ObjectContainer.title1 = NAME
-	VideoClipObject.thumb = R(ICON)
+	HTTP.CacheTime = 300
 
 ####################################################################################################
-@handler('/video/tagesschau', NAME, thumb=ICON, art=ART, allow_sync=True)
+@handler('/video/tagesschau', NAME, allow_sync=True)
 def MainMenu():
 
 	oc = ObjectContainer()
